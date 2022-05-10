@@ -1,0 +1,118 @@
+.detail .text-detail {
+  padding: 2rem 0;
+}
+
+.detail .text-detail .price {
+  color: var(--primary);
+}
+
+.detail .text-detail .description {
+  border-top: dotted 0.5px var(--cream);
+  border-bottom: dotted 0.5px var(--cream);
+}
+
+.detail .text-detail .product-count a {
+  display: inline-block;
+  padding: 0.8rem 0;
+  width: 35%;
+  text-align: center;
+  background-color: var(--primary);
+  border: solid 1px var(--primary);
+  color: var(--white);
+}
+
+.detail .text-detail .product-count a:hover {
+  background-color: var(--white);
+  color: var(--primary);
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.rating .nav {
+  background-color: #F1F6F7;
+  padding: 1rem;
+}
+
+.rating .nav li {
+  width: 10rem;
+  text-align: center;
+}
+
+.rating .nav .nav-link {
+  background-color: var(--white);
+  color: var(--black);
+}
+
+.rating .nav .active {
+  background-color: var(--primary);
+  color: var(--white);
+}
+
+.rating .tab-content {
+  padding: 2rem 1.5rem;
+}
+
+.rating .tab-content p {
+  color: var(--grey);
+}
+
+.rating .tab-content .table td {
+  padding: 0.5rem 2rem;
+}
+
+#review .overall {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  padding: 1rem 0;
+  background-color: #F1F6F7;
+}
+
+#review .overall h1 {
+  margin: 0.5rem 0;
+  color: var(--primary);
+  font-weight: bolder;
+}
+
+#review .rate-overall{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+#review .review-item{
+  margin-bottom: 1rem;
+}
+
+#review .review-item .info {
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+#review .pagination i{
+  color: var(--primary);
+}
+.top-seller img {
+  max-width: 70px;
+}
+
+.top-seller .price {
+  font-size: 1.2rem;
+  color: var(--grey);
+}
+
+.top-seller .product{
+  align-items: center;
+  height: 6.5rem;
+}
+.top-seller .product:hover .detail a {
+  color: var(--primary);
+}
+.review-item .avatar {
+  width: 90px;
+  height: 90px;
+}

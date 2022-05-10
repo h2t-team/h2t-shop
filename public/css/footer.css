@@ -1,0 +1,38 @@
+.dark-blue {
+  background-color: #002347ED;
+}
+
+.footer {
+  padding: 7rem 0 2rem 0;
+}
+
+.footer * {
+  color: var(--white);
+}
+
+.footer h3 {
+  margin-bottom: 1rem;
+}
+.footer .image li {
+  width: 70px;
+  height: 70px;
+}
+
+.footer p {
+  color: var(--grey);
+}
+
+.footer a {
+  display: block;
+  color: var(--grey);
+}
+
+.footer a:hover {
+  color: var(--primary);
+}
+
+.footer .icon{
+  background: var(--primary);
+  line-height: 100%;
+  padding: .5rem;
+}

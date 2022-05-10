@@ -1,0 +1,39 @@
+.cart-area {
+  padding-top: 90px;
+  padding-bottom: 55px;
+}
+
+.table th,
+.table td {
+  padding: 0.5rem 1.5rem;
+  border-color: #eeeeee;
+}
+
+.table thead th{
+  color: #123354;
+}
+
+.table tbody tr td {
+  padding: 1rem 1.5rem;
+  vertical-align: middle;
+  align-self: center;
+}
+
+.table tbody tr td .media img {
+  width: 54px;
+  height: 54px;
+  border-radius: 3px;
+}
+
+.table tbody tr td .media .media-body {
+  vertical-align: middle;
+  align-self: center;
+}
+
+.table tbody tr td h5 {
+  font-size: 15px;
+  color: var(--black);
+  margin-bottom: 0px;
+}
+
+

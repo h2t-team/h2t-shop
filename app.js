@@ -6,7 +6,7 @@ const logger = require('morgan');
 const session = require("express-session");
 const hbs = require('hbs');
 const flash = require('connect-flash');
-const passport = require('./auth/passport');
+// const passport = require('./auth/passport');
 const app = express();
 
 app.enable('trust proxy');
@@ -40,8 +40,8 @@ app.use(session({
 }));
 
 app.use(flash());
-app.use(passport.initialize());
-app.use(passport.session());
+// app.use(passport.initialize());
+// app.use(passport.session());
 
 //Get user from req
 app.use((req, res, next) => {
