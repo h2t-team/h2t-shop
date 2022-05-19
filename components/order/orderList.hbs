@@ -1,0 +1,46 @@
+<main>
+    <section class="shop-section">
+        <div class="container">
+            <div class="section-intro">
+                <h2 class="section-title fw-bold mb-2">My 
+                    <span class="section-title-style pb-2">Orders</span>
+                </h2>
+            </div>
+            <div class="table-responsive border pt-3 px-3">
+                <table class="table m-0">
+                    <thead>
+                        <tr>
+                            <th scope="col" style="min-width: 150px;">Receiver Name</th>
+                            <th scope="col" class="text-center">Total</th>
+                            <th scope="col" class="text-center">Created at</th>
+                            <th scope="col" class="text-center">Status</th>
+                            <th scope="col"></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {{#each orders}}
+                        <tr>
+                            <input type="hidden" name="orderId" value="{{id}}">
+                            <td>
+                                <a href="/order/confirm/{{id}}">{{'receiver_address.receiver_name'}}</a>                                
+                            </td>
+                            <td class="qty text-center">
+                                {{currencyFormat total}}
+                            </td>
+                            <td class="size text-center">
+                                {{dateFormat this.[created_at]}}
+                            </td>
+                            <td class="text-center">
+                                <span class="badge bg-{{checkStatus status}}">{{status}}</span>
+                            </td>
+                            <td style="max-width: 100px">
+                                <a href="javascript:void(0)" style="font-size: .9rem;" class="delete-btn {{checkDisabled status}}">Cancel</a>
+                            </td>
+                        </tr>
+                        {{/each}}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+</main>

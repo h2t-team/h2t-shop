@@ -1,0 +1,102 @@
+<main>
+    <section class="shop-section">
+        <div class="container">
+            <p class="text-center billing-alert">Thank you for ordering.</p>
+            <hr>
+            <h3 class="my-3">Order Status</h3>
+            <div class="row order-status mb-5 mx-0 ">
+                <div class="order-progress col-md-3 col-6 my-1 {{orderProgress 'Cancel' order.status}}">Cancel</div>
+                <div class="order-progress col-md-3 col-6 my-1 {{orderProgress 'Prepairing' order.status}}">Prepairing</div>
+                <div class="order-progress col-md-3 col-6 my-1 {{orderProgress 'Delivering' order.status}}">Delivering</div>
+                <div class="order-progress col-md-3 col-6 my-1 {{orderProgress 'Success' order.status}}">Delivered</div>
+            </div>
+            <div class="row mb-3">
+                <div class="col-md-6 mb-4 mb-xl-0 d-flex flex-column">
+                    <div class="confirmation-card h-100">
+                        <h3 class="billing-title">Order Info</h3>
+                        {{#with order}}
+                            <p>Order number: {{id}}</p>
+                            <p>Date: {{dateFormat this.[created_at]}}</p>
+                            <p>Note: {{note}}</p>
+                            <p>Total: {{currencyFormat total}}</p>
+                        {{/with}}
+                    </div>
+                </div>
+                <div class="col-md-6 mb-4 mb-xl-0 d-flex flex-column">
+                    <div class="confirmation-card h-100">
+                        <h3 class="billing-title">Shipping Address</h3>
+                            {{#with order}}
+                            <p>Receiver: {{'receiver_address.receiver_name'}}</p>
+                            <p>Telephone: {{'receiver_address.telephone'}}</p>
+                            <p>Address: {{'receiver_address.specific_address'}}</p>
+                            <p>City: Phường {{'receiver_address.ward'}}, Quận {{'receiver_address.district'}},
+                                {{'receiver_address.city'}}</p>
+                            {{/with}}
+                    </div>
+                </div>
+            </div>
+            <div class="order-details-table">
+                <h2>Order Details</h2>
+                <div class="table-responsive">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th scope="col">Product</th>
+                                <th scope="col" class="text-center">Quantity</th>
+                                <th scope="col" class="text-center">Total</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {{#each detail }}
+                            <tr>
+                                <td>
+                                    <p>{{'product.name'}} - Size: {{size}}</p>
+                                </td>
+                                <td class="text-center">
+                                    <h5>{{quantity}}</h5>
+                                </td>
+                                <td class="text-center">
+                                    <p>{{currencyFormat price}}</p>
+                                </td>
+                            </tr>
+                            {{/each}}                            
+                            <tr>
+                                <td>
+                                    <h4>Subtotal</h4>
+                                </td>
+                                <td>
+                                    <h5></h5>
+                                </td>
+                                <td class="text-center">
+                                    <p>{{currencyFormat totalWOShip}}</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <h4>Shipping</h4>
+                                </td>
+                                <td>
+                                    <h5></h5>
+                                </td>
+                                <td class="text-center">
+                                    <p>{{currencyFormat 15000}}</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <h4>Total</h4>
+                                </td>
+                                <td>
+                                    <h5></h5>
+                                </td>
+                                <td class="text-center">
+                                    <h4>{{currencyFormat order.[total]}}</h4>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
